@@ -1,38 +1,280 @@
 .App {
   text-align: center;
 }
+*{
+  box-sizing: border-box;
+ 
+}
+html{
+  font-size: 62.5%;
+}
+/*Header*/
+.App-header { 
+  font-size: calc(10px + 2vmin);
+  color: black;
+  width: 100%;
+  background-color: #EEEEEE;
+  
+}
+.contenedor{
+  margin: 0px auto;
+  max-width: 1250px;
+  width: 90%;
+}
+.App-header .contenedor{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  flex-wrap: wrap;
+}
+.title{
+  font-size: 1.3rem;
+  font-weight: bold;
+ margin: 0px;
+}
+nav a{
+  text-decoration: none;
+  margin: 0px 6px;
+  color: rgb(31, 30, 30);
+}
+/*FIn del header*/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/*
+    MAIN
+*/
+#main{
+  background: linear-gradient(90deg,tomato,rgb(250,150,93));
+  padding: 40px 0px;
+
+}
+.main-img img{
+  width: 100%;
+  filter: drop-shadow(1px 1px 2px orange);
+}
+.main-title{
+  width: 85%;
+  margin: 0px auto;
+}
+.main-title h1{
+  font-size: 3rem;
+  margin: 0;
+  text-align: start;
+  font-weight: 400;
+  width: 100%;
+}
+strong{
+  font-weight: 600;
+}
+.main-title p{
+  font-size: 1.8rem;
+  text-align: start;
+}
+.main-title a{
+  padding: 6px 20px;
+  background-color: rgb(32,184,168);
+  color: white;
+  font-size: 1.4rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* FIN DEL MAIN*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*Cards*/
+#cards .contenedor{
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.card{
+  width: 80vw;
+  margin: 1rem 0px 1rem 0px;
+  box-shadow: 0px 0px 2px grey;
+}
+.card img{
+  width: 80%;
+  margin: auto;
+  padding: 3rem 0rem;
+}
+.card h5{
+  font-size: 1.8rem;
+  margin: 0;
+}
+.card p{
+  font-size: 1.6rem;
+}
+.cards-title{
+  margin-top: 100px;
+  font-size: 1.6rem;
+  color: rgba(0, 0, 0, 0.349);
+  letter-spacing: 2px;
+}
+.cards-subtitle{
+   color: orangered;
+   font-size: 3rem;
+   margin: 2rem;
+   font-weight: 500;
+}
+.card-icons{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.card-icons a{
+  margin: 1rem;
+}
+.card-icons i{
+  font-size: 1.8rem;
+    color: rgb(230, 141, 7);
+    padding: 10px 0px;
+    transition: all 600ms;
+}
+.card-icons i:hover{
+  transform: translateY(8px);
+}
+#cards-button-container{
+  margin: 6rem 0rem;
+  width: 100%;
+}
+.cards-button{
+  padding: 15px 40px;
+  border: 2px solid orange;
+  font-size: 15px;
+  color: orange;
+  margin-top:100px;
+}
+.cards-button:hover{
+ color: orangered;
+ border: 2px solid orangered;
+}
+a{
+  text-decoration: none;
+  border-radius: 2.5rem;
+  transition-timing-function: ease-out;
+    transition-duration: 500ms;
+    transition-property: all;
+}
+/*Fin del cards*/
+
+/*FOOTER*/
+footer{
+  background: linear-gradient(to left,#1a2980,#26d0c3);
   color: white;
+  padding-top: 4rem;
+}
+.footer-letras,
+.footer-buttons{
+  width: 80vw;
+  margin: 0px auto;
+}
+.footer-buttons{
+  margin-top: 3rem;
+}
+.footer-buttons{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.footer-buttons a{
+  color: white;
+  border: 1px solid white;
+  margin-top: 1rem;
+  padding: 13px 20px;
+  font-size: 1.2rem;
+}
+.footer-letras h5{
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 500;
+  text-align: start;
+}
+.footer-letras-p{
+  font-size: 1.5rem;
+  text-align: start;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*FIN DEL FOOTER*/
+@media screen and (min-width:390px){
+  .main-title h1{
+    font-size: 4rem;
+    
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (min-width:500px){
+  .App-header .contenedor{
+    flex-direction: row;
+  }
+  .title{
+    font-size: 1.5rem;
+    margin: 0.6rem;
+   
+  }
+}
+
+@media screen and (min-width:630px){
+.title{
+  font-size: 2.3rem;
+}
+#main{
+  height:93vh;
+ 
+}
+#main .contenedor{
+  display: flex;
+}
+.main-title{
+  width: 80%;
+  margin-top: 5rem;
+}
+.main-title h1{
+  font-size:5rem;
+}
+.main-title p{
+  font-size: 2.2rem;
+}
+.main-img {
+  width: 100%;
+}
+#cards .contenedor{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.card{
+  margin: 2rem;
+  width: 25vw;
+}
+.cards-title{
+  margin-top: 100px;
+  font-size: 1.9rem;
+}
+.cards-subtitle{
+   font-size: 3.7rem;
+}
+footer{
+  padding: 8rem 0rem;
+}
+footer .contenedor{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.footer-buttons{
+  justify-content: center;
+  align-items: center;
+}
+.footer-letras h5{
+  font-size: 4.5rem;
+}
+.footer-letras-p{font-size: 1.7rem;}
+.footer-buttons a{
+  font-size: 1.4rem;
+  transition: all 700ms;
+}
+.footer-buttons a:hover{
+  transform: scaleX(1.1);
+}
+}
+@media screen and (min-width : 900px){
+  .main-img img{
+    width: 80%;
   }
 }
